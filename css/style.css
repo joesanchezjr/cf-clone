@@ -1,0 +1,283 @@
+:root {
+  --cf-blue: #0055dc;
+  --cf-orange: #f6821f;
+  --cf-navy: #003682;
+  --cf-gray: #b9b9b9;
+  --cf-pearl: #f8fbfb;
+  --cf-black: #222222;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+  height: 100px;
+  border-bottom: 1px solid lightgray;
+}
+section {
+  padding: 6rem 0;
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  line-height: 1.25;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.15rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+footer {
+  height: 500px;
+  background-color: var(--cf-black);
+}
+
+/* Utilities */
+
+.debug {
+  border: 1px solid var(--cf-orange);
+}
+
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.border-top {
+  border-top: 1px solid var(--cf-gray);
+}
+.pl-1 {
+  padding-left: 1rem;
+}
+.mb-1 {
+  margin-bottom: 1rem !important;
+}
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
+.mb-3 {
+  margin-bottom: 3rem !important;
+}
+
+/* Layout */
+ul {
+  margin: 1.5rem 0;
+}
+ul li {
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.grid {
+  display: flex;
+}
+.grid-item {
+  padding: 0 1rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+.items-2 .grid-item {
+  width: 50%;
+}
+.items-3 .grid-item {
+  width: 33.33%;
+}
+.items-4 .grid-item {
+  width: 25%;
+}
+.grid-item__feature img {
+  height: 3rem;
+}
+.grid-item__feature h5 {
+  margin-top: 0.5rem;
+}
+.grid-item__feature p {
+  font-size: 0.85rem;
+}
+
+.button-group button {
+  margin: 0 1rem;
+}
+.button-group .button:first-child {
+  margin-left: 0;
+}
+.button-group .button:last-child {
+  margin-right: 0;
+}
+
+/* Typography */
+
+.subtitle {
+  color: #f6821f;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+a {
+  color: var(--cf-blue);
+  font-weight: 700;
+}
+
+/* Components */
+
+.button {
+  padding: 1rem 1.5rem;
+  background-color: var(--cf-orange);
+  color: white;
+  font-weight: 700;
+  border: none;
+  font-size: 0.85rem;
+  border-radius: 0px;
+  height: 56px; /* Borrowed from Cloudflare becuase it was bugging me 😅 */
+}
+.button.blue {
+  background-color: var(--cf-blue);
+}
+
+/* Hero Section */
+
+section.hero {
+  padding-top: 5rem;
+}
+
+.hero-copy {
+  max-width: 40%;
+}
+.hero-image {
+  margin-left: 6rem;
+}
+.hero-button {
+  margin-top: 3.5rem;
+}
+
+/* CTAs */
+
+.cta {
+  background-color: var(--cf-navy);
+  color: white;
+  padding: 3rem 0;
+}
+.cta h3 {
+  margin-bottom: 0;
+}
+
+.cta.sign-up .cta-copy {
+  width: 65%;
+}
+
+/* What's New Section */
+
+.whats-new {
+  background-color: var(--cf-pearl);
+}
+
+.whats-new-grid .grid-item > div {
+  padding-top: 2.5rem;
+}
+.whats-new-grid-item-copy {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.whats-new-grid-item-copy a {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+/* Foundation Section */
+
+.foundation-copy {
+  justify-content: space-between;
+}
+
+.foundation-copy h2 {
+  max-width: 45%;
+  line-height: 1.125;
+}
+
+.foundation-copy p {
+  max-width: 38%;
+}
+
+/* Cloudflare For ___ */
+.cf-for-group {
+  background-color: var(--cf-pearl);
+}
+.cf-for {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid var(--cf-gray);
+}
+.cf-for:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.grid-for-features {
+  margin: 1rem 0;
+}
+.cf-for:first-child {
+  padding-top: 2rem;
+}
+
+.cf-for .grid:not(.reverse) .cf-for__copy {
+  max-width: 38%;
+}
+.cf-for .grid:not(.reverse) .cf-for__image {
+  margin-left: 6rem;
+}
+.cf-for .grid.reverse .cf-for__image {
+  max-width: 38%;
+  order: -1;
+  display: flex;
+  align-items: center;
+}
+.cf-for .grid.reverse .cf-for__image img {
+  width: 100%;
+}
+.cf-for .grid.reverse .cf-for__copy {
+  margin-left: 6rem;
+}
+
+.logo-grid .grid-item {
+  margin: 1rem 0;
+  padding: 0;
+}
